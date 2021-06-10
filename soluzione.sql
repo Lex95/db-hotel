@@ -6,7 +6,7 @@ WHERE `document_type` = "CI";
 -- es2
 SELECT *
 FROM `ospiti`
-WHERE YEAR(`date_of_birth`) > "1988";
+WHERE YEAR(`date_of_birth`) >= "1988";
 
 -- es3
 SELECT *
@@ -36,7 +36,7 @@ WHERE `document_type` = "Driver License"
 -- es8
 SELECT *
 FROM `paganti`
-WHERE `ospite_id` <> "NULL";
+WHERE `ospite_id` IS NOT NULL;
 
 -- es9
 SELECT SUM(`beds`)
